@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 import Error from "./components/Error";
 import CommentArea from "./components/CommentArea";
 import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
