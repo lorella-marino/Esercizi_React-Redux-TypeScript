@@ -52,7 +52,7 @@ const AddComment = ({ asin, addComment }) => {
           required
         />
         <select
-          className="ms-2 bg-info border-3 border-info rounded-2 text-white"
+          className="ms-2 bg-danger border-3 border-danger rounded-2 text-white"
           name="rate"
           value={rate}
           onChange={inputChange}
@@ -64,7 +64,7 @@ const AddComment = ({ asin, addComment }) => {
           ))}
         </select>
       </div>
-      <button type="submit" className="bg-info border-0 rounded-2 text-white px-3 my-3">
+      <button type="submit" className="bg-danger border-0 rounded-2 text-white px-3 my-3">
         Invia
       </button>
     </form>
