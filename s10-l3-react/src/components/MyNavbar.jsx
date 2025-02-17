@@ -7,7 +7,7 @@ const MyNavbar = () => {
   const location = useLocation();
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar>
       <Container className="justify-content-start align-items-center">
         <Navbar.Brand href="#">
           <img src="./src/assets/img/pngegg.png" alt="Logo" width="80" />
