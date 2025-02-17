@@ -1,5 +1,5 @@
 import { Container, Row, Col, ListGroup, ListGroupItem, Button } from "react-bootstrap";
-import { HeartFill, Trash3 } from "react-bootstrap-icons";
+import { Trash3 } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
