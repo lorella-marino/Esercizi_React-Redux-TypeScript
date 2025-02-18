@@ -12,7 +12,15 @@ export const removeFav = (companyName) => ({
   payload: companyName,
 });
 
-export const setCompany = (companyName) => ({
-  type: SET_COMPANY,
-  payload: companyName,
-});
+export const fetchJobs = (companyName) => async (dispatch) => {
+  try {
+    const response = await fetch(`https://strive-benchmark.herokuapp.com/api/jobs?company=${companyName}`);
+    if (!response.ok) {
+      throw new Error("Errore nel recupero dei dati");
+    }
+    const { data } = await response.json();
+    dispatch({ type: SET_COMPANY, payload: { companyName, jobs: data } });
+  } catch (error) {
+    console.error("Errore nel recupero dei risultati:", error);
+  }
+};

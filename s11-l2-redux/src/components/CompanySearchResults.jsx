@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import Job from "./Job";
 import { useParams } from "react-router-dom";
+import { fetchJobs } from "../redux/actions";
 
 const CompanySearchResults = () => {
-  const [jobs, setJobs] = useState([]);
+  const dispatch = useDispatch();
   const { companyName } = useParams();
-
-  const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?company=";
+  const jobs = useSelector((state) => state.company.jobs);
 
   useEffect(() => {
-    const getJobs = async () => {
-      try {
-        const response = await fetch(`${baseEndpoint}${companyName}`);
-        if (!response.ok) {
-          throw new Error("Errore nel recupero dei dati");
-        }
-        const { data } = await response.json();
-        setJobs(data);
-      } catch (error) {
-        console.error("Errore nel recupero dei risultati:", error);
-      }
-    };
-    if (companyName) getJobs();
-  }, [companyName]);
+    if (companyName) {
+      dispatch(fetchJobs(companyName));
+    }
+  }, [companyName, dispatch]);
 
   return (
     <Container>
