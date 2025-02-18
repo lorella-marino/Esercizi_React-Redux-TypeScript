@@ -16,9 +16,7 @@ const Favourites = () => {
           {favourites.map((company) => (
             <ListGroup.Item key={company} className="d-flex justify-content-between align-items-center">
               <Link to={`/company/${company}`}>{company}</Link>
-              <Trash3 variant="danger" onClick={() => dispatch(removeFav(company))}>
-                Rimuovi
-              </Trash3>
+              <Trash3 variant="danger" onClick={() => dispatch(removeFav(company))}></Trash3>
             </ListGroup.Item>
           ))}
         </ListGroup>
