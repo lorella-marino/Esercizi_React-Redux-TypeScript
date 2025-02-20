@@ -30,10 +30,10 @@ console.log(prezzoIVA(15));
 
 // 6) Crea una funzione che concateni due stringhe e restituisca la lunghezza totale.
 
-const concatenaEMisura = (a: string, b: string): number => {
+const concatStringhe = (a: string, b: string): number => {
   return (a + b).length;
 };
-console.log(concatenaEMisura("Buon", "giorno"));
+console.log(concatStringhe("Buon", "giorno"));
 
 /* const concatenaEMisura = (str1: string, str2: string): number => {
   return (str1 + str2).length;
