@@ -16,24 +16,29 @@ console.log(greet("Lorella"));
 
 // 4) Specifica il tipo di ritorno della seguente funzione: const sum = (a: number, b: number) => {  return a + b }
 
-const sum = (a: number, b: number) => {
+const sum = (a: number, b: number): number => {
   return a + b;
 };
 console.log(sum(2, 3));
 
 // 5) Crea una funzione che accetti un prezzo e restituisca il prezzo con IVA (22%). Usa i tipi appropriati.
 
-const prezzoIVA = (prezzo: number) => {
+const prezzoIVA = (prezzo: number): number => {
   return prezzo * 1.22;
 };
 console.log(prezzoIVA(15));
 
 // 6) Crea una funzione che concateni due stringhe e restituisca la lunghezza totale.
 
-let a: string = "Buon";
-let b: string = "giorno";
-const concStringhe = a.concat(b);
-console.log(concStringhe);
+const concatenaEMisura = (a: string, b: string): number => {
+  return (a + b).length;
+};
+console.log(concatenaEMisura("Buon", "giorno"));
+
+/* const concatenaEMisura = (str1: string, str2: string): number => {
+  return (str1 + str2).length;
+};
+console.log(concatenaEMisura("Buon", "giorno")); */
 
 // 7) Cos'è un Type Union e come si scrive?
 // Il Type Union è | e permette di unire più tipi primitivi

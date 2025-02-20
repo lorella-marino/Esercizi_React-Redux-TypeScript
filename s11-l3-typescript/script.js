@@ -20,10 +20,14 @@ var prezzoIVA = function (prezzo) {
 };
 console.log(prezzoIVA(15));
 // 6) Crea una funzione che concateni due stringhe e restituisca la lunghezza totale.
-var a = "Buon";
-var b = "giorno";
-var concStringhe = a.concat(b);
-console.log(concStringhe);
+var concatenaEMisura = function (a, b) {
+    return (a + b).length;
+};
+console.log(concatenaEMisura("Buon", "giorno"));
+/* const concatenaEMisura = (str1: string, str2: string): number => {
+  return (str1 + str2).length;
+};
+console.log(concatenaEMisura("Buon", "giorno")); */
 // 7) Cos'è un Type Union e come si scrive?
 // Il Type Union è | e permette di unire più tipi primitivi
 // 8) Crea una variabile che possa contenere un numero, null o undefined.
